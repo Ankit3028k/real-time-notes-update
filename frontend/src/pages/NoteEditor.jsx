@@ -45,7 +45,7 @@ function NoteEditor() {
     if (saveTimeout.current) clearTimeout(saveTimeout.current);
     saveTimeout.current = setTimeout(() => {
       axios
-        .put(`http://localhost:3000/api/notes/${noteId}`, {
+        .put(`https://real-time-notes-updatebackend.onrender.com/api/notes/${noteId}`, {
           content: updatedContent,
         })
         .then((res) => setLastUpdated(res.data.updatedAt));

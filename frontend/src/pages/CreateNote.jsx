@@ -11,7 +11,7 @@ function CreateNote() {
     if (!title) return alert("Title is required");
 
     try {
-      const res = await axios.post("http://localhost:3000/api/notes", {
+      const res = await axios.post("https://real-time-notes-updatebackend.onrender.com/api/notes", {
         title,
         content,
       });
